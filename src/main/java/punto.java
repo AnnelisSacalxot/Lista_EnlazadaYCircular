@@ -20,7 +20,15 @@ public class punto {
         return anterior;
     }
 
-    public void setAnterior(){
+    public void setAnterior(Object o){
         this.anterior = anterior;
+    }
+
+    public int getDato(){
+        return dato;
+    }
+
+    public void setDato(){
+        this.dato = dato;
     }
 }
