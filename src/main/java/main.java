@@ -11,13 +11,14 @@ public class main {
         //creando menu de las opciones
             do {
                 System.out.println("Lista doblemente enlaza y circular");
-                System.out.println("Eliga la opción: ");
                 System.out.println("1. Buscar");
                 System.out.println("2. Eliminar");
                 System.out.println("3. Agregar dato al inicio");
                 System.out.println("4. Agregar dato al final");
                 System.out.println("5. Imprimir de inicio al final");
                 System.out.println("6. Imprimir del final al inicio");
+                System.out.println("Eliga la opción: ");
+                opcion = leer.nextInt();
 
                 //entrando a los metodos
                 switch (opcion){

@@ -12,7 +12,24 @@ public class metodos {
     //metodos para la manipulacion de los datos
 
     public void buscar(int dato){
+        punto actual = new punto();
+        actual = ultimo;
+        boolean encontrado = false;
 
+        do {
+            if (actual.getDato() == dato){
+                encontrado = true;
+            }
+
+            actual = actual.anterior;
+        } while (actual != ultimo);
+
+        //mostrar resultado
+        if (encontrado == true){
+            System.out.println("Dato encontrado");
+        } else {
+            System.out.println("Dato no encontrado");
+        }
     }
 
     public void eliminar(int dato){
@@ -95,7 +112,15 @@ public class metodos {
         }
     }
 
-    public void imprimirAscendente(){}
+    public void imprimirAscendente(){
+        punto actual = new punto();
+        actual = primero;
+
+        do {
+            System.out.println(actual.dato);
+            actual = actual.siguiente;
+        } while (actual != primero);
+    }
 
     public void imrpimirDescentente(){}
 }
