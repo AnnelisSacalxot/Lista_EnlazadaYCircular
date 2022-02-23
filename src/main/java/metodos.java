@@ -78,18 +78,23 @@ public class metodos {
         punto nuevo = new punto();
         nuevo.dato = dato;
 
-        //verificamos los datos
-        if(primero == null){
-            primero = nuevo;
-            primero.siguiente = primero;
-            nuevo.anterior = ultimo;
-        } else{
-            ultimo.siguiente = nuevo;
-            nuevo.siguiente = primero;
-            nuevo.anterior = ultimo;
-            ultimo = nuevo;
-            primero.anterior = ultimo;
+        try {
+            //verificamos los datos
+            if (primero == null) {
+                primero = nuevo;
+                primero.siguiente = primero;
+                nuevo.anterior = ultimo;
+                ultimo = nuevo;
+            } else {
+                ultimo.siguiente = nuevo;
+                nuevo.siguiente = primero;
+                nuevo.anterior = ultimo;
+                ultimo = nuevo;
+                primero.anterior = ultimo;
 
+            }
+        } catch (Exception e){
+            System.out.println("Manejando los errores de manera correcta");
         }
     }
 
@@ -97,18 +102,23 @@ public class metodos {
         punto nuevo = new punto();
         nuevo.dato = dato;
 
-        //verificamos los datos
-        if(ultimo == null){
-            ultimo = nuevo;
-            ultimo.anterior = ultimo;
-            nuevo.siguiente = primero;
-        } else{
-            primero.anterior = nuevo;
-            nuevo.anterior= ultimo;
-            nuevo.siguiente = primero;
-            primero = nuevo;
-            ultimo.siguiente = primero;
+        try {
+            //verificamos los datos
+            if (ultimo == null) {
+                ultimo = nuevo;
+                ultimo.anterior = ultimo;
+                nuevo.siguiente = primero;
+                primero = nuevo;
+            } else {
+                primero.anterior = nuevo;
+                nuevo.anterior = ultimo;
+                nuevo.siguiente = primero;
+                primero = nuevo;
+                ultimo.siguiente = primero;
 
+            }
+        } catch (Exception e){
+            System.out.println("Manejando los errores de manera correcta");
         }
     }
 
