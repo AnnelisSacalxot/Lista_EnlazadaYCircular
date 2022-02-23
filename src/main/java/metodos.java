@@ -132,5 +132,14 @@ public class metodos {
         } while (actual != primero);
     }
 
-    public void imrpimirDescentente(){}
+    public void imrpimirDescentente(){
+        punto actual = new punto();
+        actual = ultimo;
+
+        do {
+            System.out.println(actual.dato);
+            actual = actual.anterior;
+        } while (actual != ultimo);
+
+    }
 }
