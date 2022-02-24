@@ -18,28 +18,28 @@ public class main {
                 System.out.println("5. Imprimir de inicio al final");
                 System.out.println("6. Imprimir del final al inicio");
                 System.out.println("Eliga la opción: ");
-                opcion = leer.nextInt();
+                opcion = Integer.parseInt(leer.nextLine());
 
                 //entrando a los metodos
                 switch (opcion){
                     case 1:
                         System.out.println("Ingrese el dato a buscar: ");
-                        int dato = leer.nextInt();
+                        String dato = leer.nextLine();
                         met.buscar(dato);
                         break;
                     case 2:
                         System.out.println("Ingrese el dato a eliminar: ");
-                        dato = leer.nextInt();
+                        dato = leer.nextLine();
                         met.eliminar(dato);
                         break;
                     case 3:
                         System.out.println("Ingrese el dato que desea que vaya al inicio");
-                        dato = leer.nextInt();
+                        dato = leer.nextLine();
                         met.agregarInicio(dato);
                         break;
                     case 4:
                         System.out.println("Ingrese el dato que desea que vaya al final");
-                        dato = leer.nextInt();
+                        dato = leer.nextLine();
                         met.agregarFinal(dato);
                         break;
                     case 5:

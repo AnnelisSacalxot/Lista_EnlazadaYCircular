@@ -11,7 +11,7 @@ public class metodos {
 
     //metodos para la manipulacion de los datos
 
-    public void buscar(int dato){
+    public void buscar(String dato){
         punto actual = new punto();
         actual = ultimo;
         boolean encontrado = false;
@@ -32,11 +32,11 @@ public class metodos {
         }
     }
 
-    public void eliminar(int dato){
+    public void eliminar(String dato){
         punto actual = null;
         punto tmp = null;
 
-        //recursividad en el ciclo
+        //recursividad en el ciclo doblemente enlazado
         do {
             //si eliminamos el primero
             if (actual.getDato() == dato){
@@ -74,7 +74,7 @@ public class metodos {
         } while(actual != primero);
     }
 
-    public void agregarInicio(int dato){
+    public void agregarInicio(String dato){
         punto nuevo = new punto();
         nuevo.dato = dato;
 
@@ -98,7 +98,7 @@ public class metodos {
         }
     }
 
-    public void agregarFinal(int dato){
+    public void agregarFinal(String dato){
         punto nuevo = new punto();
         nuevo.dato = dato;
 

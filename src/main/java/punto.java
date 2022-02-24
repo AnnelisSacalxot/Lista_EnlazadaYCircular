@@ -2,7 +2,7 @@
 
 public class punto {
 
-    int dato;
+    String dato;
    punto siguiente;
    punto anterior;
 
@@ -24,7 +24,7 @@ public class punto {
         this.anterior = anterior;
     }
 
-    public int getDato(){
+    public String getDato(){
         return dato;
     }
 
