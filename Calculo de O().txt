@@ -2,16 +2,16 @@
 
 	1		asignacion
 	2 			if
-	(log n) 		asignacion
+	1 		asignacion
 	1 		comparacion
 	4		   if, else
 	
-	O(n) = 8 + log n pasos
+	O(n) = 9 pasos
 	 
 ||||||||||||||||||||||		Metodo eliminar		||||||||||||||||||||||||||||
 
 	2 		asignacion
-	2n			if
+	
 ||||||||||||||||||||	        Metodo agregarInicio    |||||||||||||||||||||||||||||
 
 	1 		asignacion
@@ -28,16 +28,16 @@
 
 
 ||||||||||||||||||             Metodo imprimirAscendente |||||||||||||||||||||||||||
-		1 		asignacion
-		log n 	comparacion
+		1 	asignacion
+		1 	comparacion
 		
-		O(n) = 1 + log n pasos
+		O(n) = 2 pasos
 
 ||||||||||||||||||||	    Metodo imrpimirDescendente ||||||||||||||||||||||||||
 
-		1 		asignacion
-		log n	comparacion
+		1 	asignacion
+		1 	comparacion
 		
-		O(n)=1 + log n pasos
+		O(n)= pasos
 
 

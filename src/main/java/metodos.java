@@ -33,44 +33,65 @@ public class metodos {
     }
 
     public void eliminar(String dato){
-        punto actual = null;
-        punto tmp = null;
+        punto actual = new punto();
+        punto tmp = new punto();
+        actual = primero;
+        tmp = ultimo;
 
         //recursividad en el ciclo doblemente enlazado
         do {
-            //si eliminamos el primero
-            if (actual.getDato() == dato){
-                if(actual == primero){
-                    //eliminando el primero valor
-                    actual = primero;
-                    primero = actual.getSiguiente();
-                    ultimo.siguiente = primero;
-                    if (primero == null){
-                        //por si la lista solo tiene un valor
-                        ultimo = null;
-                    } else{
-                        primero.setAnterior(null);
-                    }
-                } else if (ultimo.getDato() == dato){
-                    //si queremos eliminar el ultimo
-                    actual = ultimo;
-                    ultimo = actual.getAnterior();
-                    ultimo.setSiguiente(null);
-                } else{ //eliminando un numero de en medio
-                    tmp = primero;
-                    actual = primero.getSiguiente();
 
-                    while (actual != null){
-                        if (actual.getDato() == dato){
-                            tmp.setSiguiente(actual.getSiguiente());
-                            actual.getSiguiente().setAnterior(tmp);
-                            break;
-                        }
-                        tmp = actual;
-                        actual = actual.getSiguiente();
-                    }
+            if (actual.dato == dato){
+                if (actual == primero){
+                    primero = primero.siguiente;
+                    ultimo.siguiente = primero;
+                    primero.anterior = ultimo;
+                } else if(actual == ultimo){
+                    ultimo = tmp;
+                    primero.anterior = ultimo;
+                    ultimo.siguiente = primero;
+                } else{
+                    tmp.siguiente = actual.siguiente;
+                    actual.siguiente.anterior = tmp;
                 }
             }
+
+            tmp = actual;
+            actual = actual.siguiente;
+
+            //si eliminamos el primero
+           // if (actual.getDato() == dato){
+             //   if(actual == primero){
+                    //eliminando el primero valor
+                   // actual = primero;
+                    //primero = actual.getSiguiente();
+                    //ultimo.siguiente = primero;
+                    //if (primero == null){
+                        //por si la lista solo tiene un valor
+                      //  ultimo = null;
+                    //} else{
+                    //    primero.setAnterior(null);
+                  //  }
+                //} else if (ultimo.getDato() == dato){
+                    //si queremos eliminar el ultimo
+                   // actual = ultimo;
+                   // ultimo = actual.getAnterior();
+                  //  ultimo.setSiguiente(null);
+                //} else{ //eliminando un numero de en medio
+                    //tmp = primero;
+                   // actual = primero.getSiguiente();
+
+                    // while (actual != null){
+                       // if (actual.getDato() == dato){
+                           // tmp.setSiguiente(actual.getSiguiente());
+                         //   actual.getSiguiente().setAnterior(tmp);
+                       //     break;
+                     //   }
+                   //     tmp = actual;
+                 //       actual = actual.getSiguiente();
+               //     }
+             //   }
+           // }
         } while(actual != primero);
     }
 
